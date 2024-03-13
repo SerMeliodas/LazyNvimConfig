@@ -5,11 +5,11 @@ return {
     opts = {
       ---@type lspconfig.options
       servers = {
-        -- pyright will be automatically installed with mason and loaded with lspconfig
         pylsp = {
-          settings = {
-            Pylsp = {},
-          },
+          settings = {},
+        },
+        texlab = {
+          settings = {},
         },
       },
     },
