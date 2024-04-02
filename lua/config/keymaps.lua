@@ -6,3 +6,12 @@ local keymap = vim.keymap
 local opts = { noremap = true, silent = true }
 
 keymap.set("n", "<leader>tb", "<cmd>TexlabBuild<cr>", opts)
+
+keymap.set("n", "<leader>h", require("hyper.view").show, opts)
+
+keymap.set("v", "<leader>E", require("ecsstractor").ecsstractor, opts)
+
+-- nota keymaps
+keymap.set("n", "<leader>no", "<cmd>Nota open_local<cr>", opts)
+keymap.set("n", "<leader>ng", "<cmd>Nota open_global<cr>", opts)
+keymap.set("n", "<leader>ns", "<cmd>Nota open_scratch<cr>", opts)

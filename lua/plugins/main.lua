@@ -4,12 +4,16 @@ return {
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "cyberdream",
+      colorscheme = "solarized-osaka",
     },
   },
 
   {
     "iibe/gruvbox-high-contrast",
+    priority = 1000,
+  },
+  {
+    "sainnhe/edge",
     priority = 1000,
   },
 
@@ -30,5 +34,13 @@ return {
 
   {
     "mattn/emmet-vim",
+  },
+  {
+    "wet-sandwich/hyper.nvim",
+    tag = "0.1.1",
+    dependencies = { "nvim-lua/plenary.nvim" },
+  },
+  {
+    "tpope/vim-surround",
   },
 }
