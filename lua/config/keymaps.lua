@@ -7,7 +7,8 @@ local opts = { noremap = true, silent = true }
 
 keymap.set("n", "<leader>tb", "<cmd>TexlabBuild<cr>", opts)
 
-keymap.set("n", "<leader>h", require("hyper.view").show, opts)
+keymap.set("n", "<leader>ho", require("curl").open_curl_tab, {})
+keymap.set("n", "<leader>hc", require("curl").close_curl_tab, {})
 
 keymap.set("v", "<leader>E", require("ecsstractor").ecsstractor, opts)
 

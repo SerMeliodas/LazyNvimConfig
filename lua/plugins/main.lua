@@ -4,8 +4,14 @@ return {
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "solarized-osaka",
+      colorscheme = "gruvbox-high-contrast",
     },
+  },
+  {
+    "dgox16/oldworld.nvim",
+    lazy = false,
+    priority = 1000,
+    config = true,
   },
 
   {
@@ -35,12 +41,48 @@ return {
   {
     "mattn/emmet-vim",
   },
+  -- {
+  --   "wet-sandwich/hyper.nvim",
+  --   dependencies = { "nvim-lua/plenary.nvim" },
+  -- },
   {
-    "wet-sandwich/hyper.nvim",
-    tag = "0.1.1",
-    dependencies = { "nvim-lua/plenary.nvim" },
+    "oysandvik94/curl.nvim",
+    dependencies = {
+      "nvim-lua/plenary.nvim",
+    },
+    config = function()
+      require("curl").setup({})
+    end,
   },
   {
     "tpope/vim-surround",
+  },
+  {
+    "andweeb/presence.nvim",
+    lazy = false,
+  },
+
+  -- logo
+  {
+    "nvimdev/dashboard-nvim",
+    event = "VimEnter",
+    opts = function(_, opts)
+      local logo = [[
+
+▓█████▄ ▓█████  ███▄ ▄███▓ ██▓ ███▄    █ ▓█████▄ ▒██   ██▒
+▒██▀ ██▌▓█   ▀ ▓██▒▀█▀ ██▒▓██▒ ██ ▀█   █ ▒██▀ ██▌▒▒ █ █ ▒░
+░██   █▌▒███   ▓██    ▓██░▒██▒▓██  ▀█ ██▒░██   █▌░░  █   ░
+░▓█▄   ▌▒▓█  ▄ ▒██    ▒██ ░██░▓██▒  ▐▌██▒░▓█▄   ▌ ░ █ █ ▒ 
+░▒████▓ ░▒████▒▒██▒   ░██▒░██░▒██░   ▓██░░▒████▓ ▒██▒ ▒██▒
+ ▒▒▓  ▒ ░░ ▒░ ░░ ▒░   ░  ░░▓  ░ ▒░   ▒ ▒  ▒▒▓  ▒ ▒▒ ░ ░▓ ░
+ ░ ▒  ▒  ░ ░  ░░  ░      ░ ▒ ░░ ░░   ░ ▒░ ░ ▒  ▒ ░░   ░▒ ░
+ ░ ░  ░    ░   ░      ░    ▒ ░   ░   ░ ░  ░ ░  ░  ░    ░  
+   ░       ░  ░       ░    ░           ░    ░     ░    ░  
+ ░                                        ░               
+      ]]
+
+      logo = string.rep("\n", 8) .. logo .. "\n\n"
+      opts.config.header = vim.split(logo, "\n")
+    end,
   },
 }
