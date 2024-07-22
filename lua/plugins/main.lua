@@ -1,10 +1,9 @@
 return {
   { "craftzdog/solarized-osaka.nvim" },
-
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "gruvbox-high-contrast",
+      colorscheme = "gruvbox",
     },
   },
   {
@@ -13,7 +12,7 @@ return {
     priority = 1000,
     config = true,
   },
-
+  { "ellisonleao/gruvbox.nvim", priority = 1000, config = true },
   {
     "iibe/gruvbox-high-contrast",
     priority = 1000,
@@ -56,33 +55,5 @@ return {
   },
   {
     "tpope/vim-surround",
-  },
-  {
-    "andweeb/presence.nvim",
-    lazy = false,
-  },
-
-  -- logo
-  {
-    "nvimdev/dashboard-nvim",
-    event = "VimEnter",
-    opts = function(_, opts)
-      local logo = [[
-
-▓█████▄ ▓█████  ███▄ ▄███▓ ██▓ ███▄    █ ▓█████▄ ▒██   ██▒
-▒██▀ ██▌▓█   ▀ ▓██▒▀█▀ ██▒▓██▒ ██ ▀█   █ ▒██▀ ██▌▒▒ █ █ ▒░
-░██   █▌▒███   ▓██    ▓██░▒██▒▓██  ▀█ ██▒░██   █▌░░  █   ░
-░▓█▄   ▌▒▓█  ▄ ▒██    ▒██ ░██░▓██▒  ▐▌██▒░▓█▄   ▌ ░ █ █ ▒ 
-░▒████▓ ░▒████▒▒██▒   ░██▒░██░▒██░   ▓██░░▒████▓ ▒██▒ ▒██▒
- ▒▒▓  ▒ ░░ ▒░ ░░ ▒░   ░  ░░▓  ░ ▒░   ▒ ▒  ▒▒▓  ▒ ▒▒ ░ ░▓ ░
- ░ ▒  ▒  ░ ░  ░░  ░      ░ ▒ ░░ ░░   ░ ▒░ ░ ▒  ▒ ░░   ░▒ ░
- ░ ░  ░    ░   ░      ░    ▒ ░   ░   ░ ░  ░ ░  ░  ░    ░  
-   ░       ░  ░       ░    ░           ░    ░     ░    ░  
- ░                                        ░               
-      ]]
-
-      logo = string.rep("\n", 8) .. logo .. "\n\n"
-      opts.config.header = vim.split(logo, "\n")
-    end,
   },
 }
