@@ -11,6 +11,9 @@ return {
         texlab = {
           settings = {},
         },
+        gopls = {
+          settings = {},
+        },
       },
     },
   },

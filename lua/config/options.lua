@@ -3,10 +3,11 @@
 -- Add any additional options here
 vim.opt.swapfile = false
 vim.opt.guicursor = "n-v-i-c:block"
-vim.opt.background = "light"
+-- vim.opt.background = "light"
 
 if vim.g.neovide then
-  vim.o.guifont = "Iosevka Nerd Font:h14" -- text below applies for VimScript
+  vim.o.guifont = "Iosevka Nerd Font:h16" -- text below applies for VimScript
+  -- vim.o.guifont = "BigBlue TerminalPlus:h14"
   vim.g.neovide_transparency = 1
   vim.g.neovide_hide_mouse_when_typing = true
   vim.g.neovide_cursor_animation_length = 0.0

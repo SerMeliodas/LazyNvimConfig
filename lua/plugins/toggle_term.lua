@@ -14,7 +14,7 @@ return {
           local state = require("neo-tree.sources.manager").get_state("filesystem")
           require("toggleterm").toggle(1, 22, state.path, "horizontal", "term")
         end,
-        desc = "vertical term",
+        desc = "horizontal term",
       },
     },
   },

@@ -13,6 +13,7 @@ return {
         "Dockerfile",
         "venv",
         "*.tex",
+        "go.mod",
       },
     },
   },
